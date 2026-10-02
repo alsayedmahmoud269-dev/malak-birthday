@@ -1117,3 +1117,8 @@ h2 {
   .letter-popup{padding:45px 22px 32px}
   .letter-popup-text{font-size:16px;line-height:1.9}
 }
+.reason-card {
+  height: 600px !important;
+  min-height: 600px !important;
+  background: red !important;
+}
