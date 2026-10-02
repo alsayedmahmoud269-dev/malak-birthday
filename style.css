@@ -683,7 +683,7 @@ h2 {
 }
 
 .photo-card.missing::after {
-  content: "Add your photo here";
+  content: "انا سايب الذكري دي فاضيه هنا عشان هتتضاف النهارده👀♥️";
   position: absolute;
   inset: 0;
   display: grid;
