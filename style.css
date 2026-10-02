@@ -1045,10 +1045,7 @@ h2 {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .reason-card {
-  height: 600px !important;
-  min-height: 600px !important;
-}
+  
 
   .paper {
     padding: 30px 22px;
@@ -1116,9 +1113,4 @@ h2 {
   .envelope{height:175px}
   .letter-popup{padding:45px 22px 32px}
   .letter-popup-text{font-size:16px;line-height:1.9}
-}
-.reason-card {
-  height: 600px !important;
-  min-height: 600px !important;
-  background: red !important;
 }
