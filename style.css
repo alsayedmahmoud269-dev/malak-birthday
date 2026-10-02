@@ -702,7 +702,7 @@ h2 {
 
 .reason-card {
   position: relative;
-  min-height: 170px;
+  min-height: 330px;
   border: 1px solid var(--line);
   border-radius: 20px;
   color: #fff;
