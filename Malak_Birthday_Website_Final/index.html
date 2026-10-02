@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#090a12">
+  <meta name="description" content="A birthday gift made with love for Malak.">
+  <title>For Malak ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loader" class="loader">
+    <div class="loader-heart">♥</div>
+    <p>Something for Malak...</p>
+  </div>
+
+  <div class="ambient">
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+    <div class="orb orb-c"></div>
+  </div>
+  <div id="stars" aria-hidden="true"></div>
+  <div id="particles" aria-hidden="true"></div>
+  <div id="confetti" aria-hidden="true"></div>
+  <div id="hearts" aria-hidden="true"></div>
+
+  <button id="musicBtn" class="floating-btn music-btn" aria-label="Toggle music">
+    <span>♫</span>
+  </button>
+
+  <div id="musicHint" class="music-hint">
+    <span>♫</span> Tap for the music
+  </div>
+
+  <audio id="bgMusic" loop preload="auto">
+    <source src="assets/music/song.mp3" type="audio/mpeg">
+  </audio>
+
+  <header class="topbar">
+    <div class="brand">M <span>×</span> K</div>
+    <div class="progress-wrap">
+      <div id="progressBar" class="progress-bar"></div>
+    </div>
+    <button id="menuBtn" class="menu-btn" aria-label="Open menu">☰</button>
+  </header>
+
+  <div id="menu" class="menu">
+    <button data-go="home">Home</button>
+    <button data-go="story">Your eyes👀</button>
+    <button data-go="memories">Memories</button>
+    <button data-go="reasons">For you</button>
+    <button data-go="letters">Letters</button>
+    <button data-go="letter">My letter</button>
+    <button data-go="final">Birthday</button>
+  </div>
+
+  <main>
+    <section id="home" class="page active">
+      <div class="hero">
+        <p class="eyebrow">A little website made for one person</p>
+        <h1>Happy Birthday,<br><span>Malak</span> <i>♥</i></h1>
+        <p class="hero-sub">...السنه دي الهديه مش حاجه تتفتح<br>الهديه حاجه تتعاش</p>
+
+        <div id="countdown" class="countdown" hidden>
+          <div><strong id="days">00</strong><small>days</small></div>
+          <div><strong id="hours">00</strong><small>hours</small></div>
+          <div><strong id="minutes">00</strong><small>minutes</small></div>
+          <div><strong id="seconds">00</strong><small>seconds</small></div>
+        </div>
+
+        <button id="startBtn" class="main-btn">
+          <span>Open your gift</span>
+          <b>→</b>
+        </button>
+        <p class="tiny">Turn your sound on if you want the full experience</p>
+      </div>
+    </section>
+
+    <section id="gift" class="page">
+      <div class="section-inner center">
+        <p class="eyebrow">Step 01</p>
+        <h2>جاهزة تعرفي كنت<br><span>بجهزلك اي كل دا</span></h2>
+        <p class="section-sub">👀♥️يلا نفتح اول هديه...والباقي لما اشوفك</p>
+
+        <button id="giftBox" class="gift" aria-label="Open gift">
+          <div class="gift-lid"></div>
+          <div class="gift-body"></div>
+          <div class="gift-ribbon-v"></div>
+          <div class="gift-ribbon-h"></div>
+          <div class="gift-bow left"></div>
+          <div class="gift-bow right"></div>
+        </button>
+        <p class="tap-hint">Tap the gift</p>
+      </div>
+    </section>
+
+    <section id="welcome" class="page">
+      <div class="section-inner center narrow">
+        <p class="eyebrow">Step 02</p>
+        <div class="big-heart">♥</div>
+        <h2 id="typeTitle"></h2>
+        <p id="typeText" class="letter-text"></p>
+        <button class="main-btn next-btn" data-next="story">Keep going <b>→</b></button>
+      </div>
+    </section>
+
+    <section id="story" class="page">
+      <div class="section-inner">
+        <p class="eyebrow">Step 03</p>
+        <h2>3 Little things <span>I love about you.</span></h2>
+        <p class="section-sub">طبعا هما مش 3 بس ...انا لو عديتهم هقعد عمري كله اعد فيهم ومش هيكفي.</p>
+
+        <div id="timeline" class="timeline"></div>
+
+        <button class="main-btn next-btn" data-next="memories">See our memories <b>→</b></button>
+      </div>
+    </section>
+
+    <section id="memories" class="page">
+      <div class="section-inner">
+        <p class="eyebrow">Step 04</p>
+        <h2>Moments I want<br><span>to keep.</span></h2>
+        <p class="section-sub">و دي شوية ذكريات انا عايز اسيبها هنا</p>
+
+        <div id="gallery" class="gallery"></div>
+
+        <button class="main-btn next-btn" data-next="reasons">There is more <b>→</b></button>
+      </div>
+    </section>
+
+    <section id="reasons" class="page">
+      <div class="section-inner">
+        <p class="eyebrow">Step 05</p>
+        <h2>Things I love<br><span>about you.</span></h2>
+        <p class="section-sub">😂😂المره دي بجد</p>
+
+        <div id="reasonsGrid" class="reasons-grid"></div>
+
+        <button class="main-btn next-btn" data-next="letters">Open your letters <b>→</b></button>
+      </div>
+    </section>
+
+    <section id="letters" class="page">
+      <div class="section-inner narrow letters-section">
+        <p class="eyebrow">Step 06</p>
+        <h2>A few letters<br><span>for you.</span></h2>
+        <p class="section-sub">Four little messages. Open them whenever you need them.</p>
+
+        <div id="envelopes" class="envelope-grid"></div>
+
+        <button class="main-btn next-btn" data-next="letter">Read my long letter <b>→</b></button>
+      </div>
+    </section>
+
+    <section id="letter" class="page">
+      <div class="section-inner narrow">
+        <p class="eyebrow">Step 07</p>
+        <div class="paper">
+          <div class="paper-top">إلي أغلي شخصٌ في قَلبِي</div>
+          <h2 id="letterTitle"></h2>
+          <div id="letterBody" class="letter-body"></div>
+          <div class="signature">
+            <span>Always,</span>
+            <strong id="senderName"></strong>
+            <span>♥</span>
+          </div>
+        </div>
+        <button class="main-btn next-btn" data-next="final">One last thing <b>→</b></button>
+      </div>
+    </section>
+
+    <section id="final" class="page">
+      <div class="section-inner center final-screen">
+        <div class="cake" id="cake" aria-label="Birthday cake">
+          <div class="flame"></div>
+          <div class="candle"></div>
+          <div class="cake-top"></div>
+          <div class="cake-body"></div>
+          <div class="cake-plate"></div>
+        </div>
+
+        <p class="eyebrow">The end of the website</p>
+        <h2>Happy Birthday,<br><span>Malak.</span></h2>
+        <p id="finalText" class="final-text"></p>
+
+        <div class="final-actions">
+          <button id="celebrateBtn" class="main-btn">Celebrate ♥</button>
+          <button id="restartBtn" class="text-btn">Start again</button>
+        </div>
+
+        <p class="tiny">Made by <span id="footerName"></span></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
