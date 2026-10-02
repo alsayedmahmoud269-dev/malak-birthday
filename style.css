@@ -1045,9 +1045,7 @@ h2 {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .reason-card {
-    min-height: 145px;
-  }
+  
 
   .paper {
     padding: 30px 22px;
